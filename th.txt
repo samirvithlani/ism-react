@@ -1,0 +1,71 @@
+						REACT JS
+1 library   : pre define non arch....         
+2 framework : framwork is pre define arch...
+
+
+xml -->
+json -->
+
+SPA   --> single page application
+
+	html -->index.html --> start ---> index.html
+
+
+-->change ->DOM*  --> virtual dom --> = origin
+
+DOM
+react have virtual dom -->
+
+
+NPM  --> node pkg manager
+
+	-->
+  -->import
+
+node packages --> js class functions -->
+
+
+monolothic arch :-
+
+modulor based  -> product ,cart,,user, admin  ->app
+
+MVC  models view and controller  --> model --> bean model userModel views  --> html  controller --> clas action
+
+3 tire 
+
+n tire application
+model views controller   -->.net ,model
+viewsangular react
+
+mvvm  --> model ->view -->view model -->
+
+JSX  -->
+
+
+tern ? :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+node modules -->
+import packages
+
+
+npx create-react-app name
