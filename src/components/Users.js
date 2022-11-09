@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { RegisterUser } from "./RegisterUser";
 import { UserList } from "./UserList";
 
 export const Users = (props) => {
@@ -31,10 +32,20 @@ export const Users = (props) => {
     console.log("after filter", users);
   };
 
+  const addUser = (user)=>{
+    //push spread operator
+    console.log("user",user);
+    ///1 param is array 2 param is object
+    //users = [...users,user];//object
+    //setusers(users); 
+    setusers([...users,user]);
+  }
+
   return (
     <div>
       <h1>USER COMPONENT</h1>
-      <UserList users={users} t1={props.title} deleteData={deletData} />
+      <RegisterUser addUser = {addUser}/>
+      <UserList users={users}  deleteData={deletData} />
     </div>
   );
 };

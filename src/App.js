@@ -4,16 +4,18 @@ import './styles.css';
 import { Header } from './components/Header';
 import Footer  from './components/Footer';
 import { Users } from './components/Users';
+import { RegisterUser } from './components/RegisterUser';
 
 function App() {
 
-  var title = "USER APP"
+  //var title = "USER APP"
 
 
   return (
     <div className="App">
-      <h1>APP JS</h1>
-      <Users title = {title}/> 
+      
+      
+      <Users/>
     </div>
     
   );
