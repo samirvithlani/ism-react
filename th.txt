@@ -69,3 +69,9 @@ import packages
 
 
 npx create-react-app name
+create sep js file for validation schema
+
+
+
+routings...
+react-router-dom v6

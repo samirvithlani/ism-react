@@ -11,11 +11,14 @@ export const Header = () => {
   };
   return (
     <div>
-      <h1 className="header"></h1>
+      {/* <h1 className="header"></h1>
       <h1>Name = {name}</h1>
       <h2>age = {age}</h2>
       <h3 style={style}>isMarried = {isMarried ? "YES" : "NO"}</h3>
-      <h4>salary = {salary}</h4>
+      <h4>salary = {salary}</h4> */}
+      <h1>
+        Header
+      </h1>
     </div>
   );
 };
