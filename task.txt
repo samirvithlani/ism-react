@@ -1,1 +1,6 @@
 register form with bootstrap
+
+routing
+about us
+contact us  --> form -->name email phone message ---> submit button alert(data) onchange
+feedback --> on blur
