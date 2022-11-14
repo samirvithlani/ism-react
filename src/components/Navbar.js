@@ -24,7 +24,7 @@ export const Navbar = () => {
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
               <Link class="nav-link" to="/home">
-                Home 
+                Home
               </Link>
             </li>
             <li class="nav-item active">
@@ -37,12 +37,16 @@ export const Navbar = () => {
                 Contact us
               </Link>
             </li>
+            <li>
+              <Link class="nav-link" to="/tutoriallist">
+                Titorial LIST
+              </Link>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="#">
                 Link
               </a>
             </li>
-           
           </ul>
         </div>
       </nav>
