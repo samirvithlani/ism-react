@@ -1,17 +1,30 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import {Link} from 'react-router-dom';
 
 export const TutorialList = () => {
   const [tutorials, settutorials] = useState([]);
 
-  
+  const showtoast1 = async(data) => {
+
+      toast.info(data, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
+
+  };
+
   useEffect(() => {
     getAllTutorial();
-
-  }, [])
-  
-
-
+  }, []);
 
   const getAllTutorial = async () => {
     await axios
@@ -22,21 +35,37 @@ export const TutorialList = () => {
       });
   };
 
-  const deleteTutorial = async(id)=>{
-
-    await axios.delete("https://tutorialapi1.herokuapp.com/tutorial/"+id).then(res=>{
-        if(res.status=== 200){
-            getAllTutorial()
+  const deleteTutorial = async (id) => {
+    await axios
+      .delete("https://tutorialapi1.herokuapp.com/tutorial/" + id)
+      .then((res) => {
+        if (res.status === 200) {
+          showtoast1(res.data);
+          getAllTutorial();
+        } else {
+          //getAllTutorial()
+          alert("Error");
         }
-        else{
-            //getAllTutorial()
-            alert("Error")
-        }
-    })
-  }
+      }); 
+  };
   return (
-    <div>   
-        {/* <button onClick={()=>{getAllTutorial()}}>
+    <div>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
+      {/* Same as */}
+      <ToastContainer />
+      <button onClick={()=>{showtoast1()}}>Show Toast</button>
+      {/* <button onClick={()=>{getAllTutorial()}}>
             get
         </button> */}
       <table class="table">
@@ -44,9 +73,9 @@ export const TutorialList = () => {
           <tr>
             <th scope="col">ID</th>
             <th scope="col">TITLE</th>
-            <th scope="col">DESCRIPTION</th>
+            {/* <th scope="col">DESCRIPTION</th>
             <th scope="col">FEES</th>
-            <th scope="col">Published???</th>
+            <th scope="col">Published???</th> */}
             <th scope="col">ACTION</th>
           </tr>
         </thead>
@@ -57,15 +86,22 @@ export const TutorialList = () => {
               <tr>
                 <th scope="row">{tut.id}</th>
                 <td>{tut.title}</td>
-                <td>{tut.description}</td>
+                {/* <td>{tut.description}</td>
                 <td>{tut.fees}</td>
+                <td>{tut.published ? "published" : "not published"}</td> */}
                 <td>
-                    {
-                        tut.published ? "published" : "not published"
-                    }
-                </td>
-                <td>
-                    <button className="btn btn-danger" onClick={()=>{deleteTutorial(tut.id)}}>Delete</button>
+                  <button
+                    className="btn btn-danger"
+                    onClick={() => {
+                      deleteTutorial(tut.id);
+                    }}
+                  >
+                    Delete
+                  </button>
+                  
+                  <Link className="btn btn-info" to= {`/tutorialdetail/${tut.id}`}>
+                      DETAIL
+                  </Link>
                 </td>
               </tr>
             );

@@ -41,6 +41,13 @@ export const Navbar = () => {
               <Link class="nav-link" to="/tutoriallist">
                 Titorial LIST
               </Link>
+              
+            </li>
+            <li>
+              <Link class="nav-link" to="/addtutorial">
+                Add Titorial 
+              </Link>
+              
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">

@@ -13,6 +13,8 @@ import { AboutUs } from './pages/AboutUs';
 import { ContactUs } from './pages/ContactUs';
 import { ContactDetaill } from './pages/ContactDetaill';
 import { TutorialList } from './api/TutorialList';
+import { AddTutorial } from './api/AddTutorial';
+import { TutorialDetail } from './api/TutorialDetail';
 
 function App() {
 
@@ -30,6 +32,8 @@ function App() {
         <Route path='/contactus' element={<ContactUs/>}/>
         <Route path='/contactdetail/:id/' element={<ContactDetaill/>}/>
         <Route path='/tutoriallist' element = {<TutorialList/>}></Route>
+        <Route path='/addtutorial' element = {<AddTutorial/>}></Route>
+        <Route path = "tutorialdetail/:id" element = {<TutorialDetail/>}></Route>
       </Routes>
 
       <Footer/>
