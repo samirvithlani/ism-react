@@ -3,6 +3,9 @@ import React, { useEffect, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import {Link} from 'react-router-dom';
+import DeleteIcon from '@mui/icons-material/Delete';
+import InfoIcon from '@mui/icons-material/Info';
+import Info from "@mui/icons-material/Info";
 
 export const TutorialList = () => {
   const [tutorials, settutorials] = useState([]);
@@ -96,12 +99,17 @@ export const TutorialList = () => {
                       deleteTutorial(tut.id);
                     }}
                   >
-                    Delete
+                    <DeleteIcon/>
                   </button>
                   
-                  <Link className="btn btn-info" to= {`/tutorialdetail/${tut.id}`}>
-                      DETAIL
+                  <Link  to= {`/tutorialdetail/${tut.id}`}>
+                      <Info/>
                   </Link>
+                  <Link className="btn btn-primary" to= {`/tutorialupdate/${tut.id}`}>
+                        Update
+                  </Link>
+                 
+                 
                 </td>
               </tr>
             );
