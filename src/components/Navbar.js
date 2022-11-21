@@ -41,13 +41,16 @@ export const Navbar = () => {
               <Link class="nav-link" to="/tutoriallist">
                 Titorial LIST
               </Link>
-              
             </li>
             <li>
               <Link class="nav-link" to="/addtutorial">
-                Add Titorial 
+                Add Titorial
               </Link>
-              
+            </li>
+            <li>
+              <Link class="nav-link" to="/login">
+                LOGIN
+              </Link>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">

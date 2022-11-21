@@ -15,7 +15,9 @@ export const TutorialUpdate = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm(
+    
+  );
 
   const [tutorial, settutorial] = useState({});
 
@@ -92,7 +94,7 @@ export const TutorialUpdate = () => {
         </div>
         <div>
           <label>Description</label>
-          <input type="text" {...register("description")} defaultValue={tutorial.description}/>
+          <input type="text" {...register("description")}  defaultValue={tutorial.description}/>
         </div>
         <div>
           <label>Published</label>
