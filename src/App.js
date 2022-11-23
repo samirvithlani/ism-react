@@ -19,13 +19,14 @@ import { TutorialUpdate } from "./api/TutorialUpdate";
 import { LoginUser } from "./components/LoginUser";
 import ProtectedRoutes from "./components/ProtectedRoutes";
 import { Sidebar } from "./components/Sidebar";
+import { Data } from "./context/Data";
 
 function App() {
   //var title = "USER APP"
 
   return (
     <div className="App">
-      <Sidebar/>
+      <Data />
 
       <Routes>
         <Route path="/home" element={<Home />} />
