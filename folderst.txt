@@ -1,0 +1,30 @@
+
+https://www.creative-tim.com/
+
+/paitent
+doctor
+admin
+
+
+admin
+sup
+buyer
+
+
+src
+  admin
+	query.js
+	constant.js
+	components
+	context.js
+	
+	
+  user
+	query.js
+	constant.js
+	components
+	context.js
+
+
+sharedContexxt.js
+protectedRoutes.js

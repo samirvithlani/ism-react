@@ -20,14 +20,23 @@ import { LoginUser } from "./components/LoginUser";
 import ProtectedRoutes from "./components/ProtectedRoutes";
 import { Sidebar } from "./components/Sidebar";
 import { Data } from "./context/Data";
+import { AppContext } from "./context/context";
+import { useState } from "react";
+import { FetchData } from "./query/FetchData";
+import { MuiDemo1 } from "./mui/MuiDemo1";
 
 function App() {
   //var title = "USER APP"
-
+   const [students, setstudents] = useState([{
+    id: 1,
+    name: "Raj",
+   }])
   return (
     <div className="App">
-      <Data />
+      <Navbar/>
+      <MuiDemo1/> 
 
+      <AppContext.Provider value ={students}>
       <Routes>
         <Route path="/home" element={<Home />} />
         <Route element={<ProtectedRoutes />}>
@@ -47,6 +56,7 @@ function App() {
         </Route>
         <Route path="/login" element={<LoginUser />}></Route>
       </Routes>
+      </AppContext.Provider>
 
       <Footer />
     </div>
