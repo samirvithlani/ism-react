@@ -24,6 +24,8 @@ import { AppContext } from "./context/context";
 import { useState } from "react";
 import { FetchData } from "./query/FetchData";
 import { MuiDemo1 } from "./mui/MuiDemo1";
+import { MuiTable } from "./mui/MuiTable";
+import { AddUserData } from "./query/AddUserData";
 
 function App() {
   //var title = "USER APP"
@@ -34,7 +36,7 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
-      <MuiDemo1/> 
+      <MuiTable/>
 
       <AppContext.Provider value ={students}>
       <Routes>
